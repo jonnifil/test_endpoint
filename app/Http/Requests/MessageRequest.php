@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class MessageRequest extends FormRequest
 {
     /**
-     *
+     * @return string[]
      */
     public function rules(): array
     {

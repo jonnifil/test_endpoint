@@ -4,6 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property integer $id
+ * @property string $external_message_id
+ * @property string $message_text
+ * @property integer $dialog_id
+ * @property integer $send_at
+ */
 class Message extends Model
 {
     public $timestamps = false;

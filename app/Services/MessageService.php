@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Cache;
 
 class MessageService
 {
+
+    /**
+     * @param array $data
+     * @return bool
+     */
     public function sendMessage(array $data): bool
     {
         $data['dialog_id'] = $this->getDialogId($data['external_client_id'], $data['client_phone']);
@@ -28,6 +33,7 @@ class MessageService
     /**
      * Значения статичные - держим в кеше для уменьшения нагрузки на БД
      * @param string $clientUuid
+     * @param string $clientPhone
      * @return int
      */
     protected function getDialogId(string $clientUuid, string $clientPhone): int
